@@ -15,7 +15,7 @@ import org.apache.spark.SparkConf
 
 object NaiveBayesClassifier {
   // name of class, {word1: p1, word2: p2}
-  type MODEL = Pair[String, HashMap[String, Double]]
+  type MODEL = (String, HashMap[String, Double])
 
   def classify(line: String, model: Array[MODEL]): String = {
     var result = "default"

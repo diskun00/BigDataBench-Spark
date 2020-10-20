@@ -1,13 +1,16 @@
 name := "BigDataBench-Spark"
-
 version := "3.0.0"
+scalacOptions := Seq("-unchecked", "-deprecation")
 
-scalaVersion := "2.12.0"
+scalaVersion := "2.12.10"
 
-libraryDependencies += "org.apache.spark" %% "spark-core" % "3.0.0"
+val sparkVersion = "3.0.0"
+val hadoopVersion = "2.8.3"
 
-libraryDependencies += "org.apache.spark" %% "spark-mllib" % "3.0.0"
+libraryDependencies ++= Seq(
+  "org.apache.spark" %% "spark-core" % sparkVersion,
+  "org.apache.spark" %% "spark-mllib" % sparkVersion,
+  "org.apache.spark" %% "spark-graphx" % sparkVersion,
+  "org.apache.hadoop"%% "hadoop-client" % hadoopVersion
+)
 
-libraryDependencies += "org.apache.spark" %% "spark-graphx" % "3.0.0"
-
-libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "2.8.5"

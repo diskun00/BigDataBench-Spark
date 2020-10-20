@@ -18,7 +18,7 @@ object NaiveBayesTrainer {
    * WCOUNT: count for each word
    * Int: number of class lines
    */
-  type MODEL = Pair[String, Pair[WCOUNT, Int]]
+  type MODEL = (String, (WCOUNT, Int))
 
   def train(line: String): MODEL = {
     val _wcount = new WCOUNT() // [word, count]
