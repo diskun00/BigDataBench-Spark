@@ -10,7 +10,8 @@ val hadoopVersion = "2.8.3"
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-mllib" % sparkVersion,
-  "org.apache.spark" %% "spark-graphx" % sparkVersion,
-  "org.apache.hadoop"%% "hadoop-client" % hadoopVersion
+  "org.apache.spark" %% "spark-graphx" % sparkVersion
 )
+
+libraryDependencies += "org.apache.hadoop" % "hadoop-client" % hadoopVersion
 
